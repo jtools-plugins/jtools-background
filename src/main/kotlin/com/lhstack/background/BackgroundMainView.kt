@@ -157,12 +157,20 @@ class BackgroundMainView(val project: Project) : JPanel(), Disposable, SyncDataT
                 val enable = propertiesComponent.getBoolean("${PREFIX}.enable", false)
                 this.isEnabled = !enable
                 this.addActionListener {
-                    if (!propertiesComponent.getBoolean("${PREFIX}.enable", false)) {
-                        this.isEnabled = false
-                        storeAndNotify("${PREFIX}.enable", "true")
-                        disableButton.isEnabled = true
-                        updateBackground()
+                    if(pathTextField.text.isNotBlank()) {
+                        val f = File(pathTextField.text)
+                        if(!f.exists()){
+                            Messages.showInfoMessage("背景图片不存在,请选择你要设置的背景图片","JToolsBackground")
+                            return@addActionListener
+                        }
+                        if (!propertiesComponent.getBoolean("${PREFIX}.enable", false)) {
+                            this.isEnabled = false
+                            storeAndNotify("${PREFIX}.enable", "true")
+                            disableButton.isEnabled = true
+                            updateBackground()
+                        }
                     }
+
 
                 }
             })

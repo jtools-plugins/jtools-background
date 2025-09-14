@@ -32,5 +32,5 @@ class PluginImpl: IPlugin {
 
     override fun pluginDesc(): String = "为你的Ide设置背景图片"
 
-    override fun pluginVersion(): String = "v0.0.1"
+    override fun pluginVersion(): String = "v0.0.2"
 }
