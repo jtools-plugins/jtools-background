@@ -55,7 +55,7 @@ class BackgroundMainView(val project: Project) : JPanel(), Disposable, SyncDataT
             override fun actionPerformed(e: ActionEvent) {
                 val chooserDescriptor = FileChooserDescriptor(true, false, false, false, false, false)
                     .withFileFilter {
-                        when (StringUtils.lowerCase(it.extension)) {
+                        when (it.extension?.lowercase()) {
                             "png", "jpg", "jpeg", "gif", "svg" -> true
                             else -> false
                         }

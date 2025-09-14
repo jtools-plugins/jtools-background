@@ -13,27 +13,25 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+
     <description><![CDATA[
-    <div>
-        <span> <a href="https://github.com/jtools-plugins/jtools-background">Source Code</a></span>
-    </div>
-    <h1>JTools-Background</h1>
-    <p>他可以为你的Jetbrains产品设置背景图片,同时随着调整不同的参数,会立即更新背景图片的效果</p>
+    <p> JTools-Background - A plugin that allows you to set custom background images for your JetBrains IDE. With real-time parameter adjustment, you can instantly preview different background effects.</p>
+    <p>一款专为JetBrains产品设计的背景图片设置插件，支持实时调整参数并立即预览效果，让您的开发环境更加个性化。</p>
   ]]></description>
 
-    <change-notes>
-        <![CDATA[
-            <h2>Version v0.0.1</h2>
-            <ul>
-                <li>为Jetbrains产品设置背景图片</li>
-            </ul>
-        ]]>
-    </change-notes>
+    <change-notes> <![CDATA[
+        <h2>版本 v0.0.1 / Version v0.0.1</h2>
+        <ul>
+            <li>实现JetBrains产品背景图片设置功能 / Implemented background image setting feature for JetBrains products</li>
+            <li>支持实时参数调整与预览 / Supports real-time parameter adjustment and preview</li>
+            <li>提供多种背景效果自定义选项 / Provides multiple background effect customization options</li>
+        </ul>
+]]> </change-notes>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-    <idea-version since-build="171.*" until-build="252.*" />
+    <idea-version since-build="171.*" until-build="252.*"/>
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
